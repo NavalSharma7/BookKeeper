@@ -29,8 +29,8 @@ namespace BookKeeper
 
             // add databse context
             services.AddDbContext<BookKeeperDbContext>(
-               options => options.UseSqlServer("Server=localdb;Integrated Security=true;Database= BookKeeperdb;Initial Catalog='BookKeeperdb'")
-        );
+               options => options.UseSqlite(Configuration.GetConnectionString("DefaultConnectionStr")
+        ));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
