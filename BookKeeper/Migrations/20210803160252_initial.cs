@@ -10,10 +10,10 @@ namespace BookKeeper.Migrations
                 name: "Books",
                 columns: table => new
                 {
-                    ISBN = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Category = table.Column<int>(type: "int", nullable: false),
-                    Author = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    ISBN = table.Column<string>(type: "TEXT", nullable: false),
+                    Title = table.Column<string>(type: "TEXT", nullable: true),
+                    Category = table.Column<int>(type: "INTEGER", nullable: false),
+                    Author = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -24,9 +24,9 @@ namespace BookKeeper.Migrations
                 name: "Categories",
                 columns: table => new
                 {
-                    NameToken = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Type = table.Column<int>(type: "int", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    NameToken = table.Column<string>(type: "TEXT", nullable: false),
+                    Type = table.Column<int>(type: "INTEGER", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -37,8 +37,8 @@ namespace BookKeeper.Migrations
                 name: "CategoryTypes",
                 columns: table => new
                 {
-                    Type = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Type = table.Column<string>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {

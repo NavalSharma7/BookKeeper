@@ -20,6 +20,7 @@
     <None Remove="MySql.Data.EntityFrameworkCore" />
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -28,6 +29,7 @@
     <Folder Include="Pages\Scaffolding\CategoryScaffold\" />
     <Folder Include="Pages\Scaffolding\CategoryTypeScaffold\" />
     <Folder Include="Data\Context\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.8" />
