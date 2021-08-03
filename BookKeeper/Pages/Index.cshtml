@@ -5,11 +5,14 @@
 }
 
 <section>
+
+    @if(Model.books!=null)
+    {
     @foreach (var book in Model.books)
     {
      <partial name="_bookKeeperEntry" model="@book" />
     }
-    
+    }
 </section>
 
 <form asp-page="./index" method="post">
