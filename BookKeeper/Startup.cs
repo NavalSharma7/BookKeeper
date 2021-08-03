@@ -26,9 +26,11 @@ namespace BookKeeper
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            // ad databse context
+
+            // add databse context
             services.AddDbContext<BookKeeperDbContext>(
-               options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+               options => options.UseSqlServer("Server=localdb;Integrated Security=true;Database= BookKeeperdb;Initial Catalog='BookKeeperdb'")
+        );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,7 +46,7 @@ namespace BookKeeper
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+           
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

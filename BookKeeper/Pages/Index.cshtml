@@ -5,6 +5,16 @@
 }
 
 <section>
-    <partial name="_bookKeeperEntry"/>
-
+    @foreach (var book in Model.books)
+    {
+     <partial name="_bookKeeperEntry" model="@book" />
+    }
+    
 </section>
+
+<form asp-page="./index" method="post">
+    <label asp-for="book.Title">Title:</label><input asp-for="book.Title" />
+    <label asp-for="book.Author">Author:</label><input asp-for="book.Author"/>
+    <label asp-for="book.Category">Category:</label><input asp-for="book.Category" />
+    <input name ="Add" type="submit" />
+</form>
